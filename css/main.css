@@ -9,6 +9,18 @@
    background: #222;
    color: white;
 }
+
+/*
+   Тестовые стили
+*/
+menu li:nth-child(even) {
+   border: red 1px solid;
+}
+
+/*
+   Конец тестовых стилей
+*/
+
 /**/
 .h2 {
    font-size: 50px;
