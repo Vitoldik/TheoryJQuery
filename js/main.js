@@ -76,3 +76,20 @@ tagP.hide().text('Новый текст 1').show(3000)
 */
 // [div, div, div, div]
 $('.icons > div').hide(3000).show(2000)
+
+/*
+   Методы width и height
+*/
+const btn = $('.btn')
+const btnWidth = btn.width()
+const btnHeight = btn.height()
+// console.log(btnWidth, btnHeight)
+btn.width(300)
+btn.height(300)
+
+const widthAndHeight = (element) => {
+   const object = $('.' + element)
+   return `${object.width()}, ${object.height()}`
+}
+
+console.log(widthAndHeight('btn'))
