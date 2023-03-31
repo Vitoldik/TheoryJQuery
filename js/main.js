@@ -93,3 +93,10 @@ const widthAndHeight = (element) => {
 }
 
 console.log(widthAndHeight('btn'))
+
+/*
+   Метод html
+*/
+const mainText = $('.mainText')
+console.log(mainText.html()) // Вывод содержимого в виде html
+// mainText.html('<b>Жирный текст</b>') // Изменить содержимое элемента
