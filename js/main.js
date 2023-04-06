@@ -127,3 +127,13 @@ logo.fadeTo(4000, 0.1, function (){}).fadeTo(4000, 1)
    скользящим движением (постепенно уменьшая их высоту)
 */
 $('menu li:first-child').slideUp(2000).slideDown(2000)
+
+/*
+   Метод attr и removeAttr - добавление/удаление аттрибутов у элементов
+*/
+const logoImg = $('.logo img')
+
+console.log(logoImg.attr('src'))
+logoImg.attr('src', 'img/icon2.png')
+logoImg.attr('data-test', 0)
+logoImg.removeAttr('test') // удаление аттрибутов
