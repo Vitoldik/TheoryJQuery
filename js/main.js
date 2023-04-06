@@ -100,3 +100,17 @@ console.log(widthAndHeight('btn'))
 const mainText = $('.mainText')
 console.log(mainText.html()) // Вывод содержимого в виде html
 // mainText.html('<b>Жирный текст</b>') // Изменить содержимое элемента
+
+/*
+   Методы fadeIn и fadeOut
+*/
+const elementOut = (element, time) => {
+   if (time > 5000 || time < 1000 || isNaN(time))
+      return false
+
+   $(`.${element}`).fadeOut(time)
+}
+
+elementOut('btn', 2000)
+
+btn.fadeIn(3000)
