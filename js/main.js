@@ -102,7 +102,7 @@ console.log(mainText.html()) // Вывод содержимого в виде ht
 // mainText.html('<b>Жирный текст</b>') // Изменить содержимое элемента
 
 /*
-   Методы fadeIn и fadeOut
+   Методы fadeIn (плавное появление) и fadeOut (плавное скрытие)
 */
 const elementOut = (element, time) => {
    if (time > 5000 || time < 1000 || isNaN(time))
@@ -114,3 +114,10 @@ const elementOut = (element, time) => {
 elementOut('btn', 2000)
 
 btn.fadeIn(3000)
+
+/*
+   Метод fadeTo - изменение уровня прозрачности элемента
+*/
+const logo = $('.logo')
+// 3 аргумент - функция, которая будет выполнена после полного изменения прозрачности
+logo.fadeTo(4000, 0.1, function (){}).fadeTo(4000, 1)
