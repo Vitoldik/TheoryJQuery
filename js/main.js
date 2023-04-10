@@ -149,4 +149,15 @@ console.log(`Nav data: ${key}`)
 /*
    Методы addClass и removeClass
 */
-$('nav menu').addClass('border').removeClass('border')
+const navMenu = $('nav menu')
+navMenu.addClass('border').removeClass('border')
+
+/*
+   Метод css
+*/
+console.log(navMenu.css('font-size'))
+navMenu.css('font-size', '16px')
+navMenu.css({
+   'color': 'green',
+   'padding': '10px'
+})
