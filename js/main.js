@@ -194,3 +194,8 @@ $('.icons img').each(function () {
    if (element.attr('src').includes('icon2'))
       element.fadeOut(1000)
 })
+
+/*
+   Свойство length
+*/
+console.log($('div').length)
