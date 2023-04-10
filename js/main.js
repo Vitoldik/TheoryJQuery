@@ -184,3 +184,13 @@ mainText.append('<h3>Текст в конце</h3>')
 mainText.prepend('<h3>Текст в начале</h3>')
 mainText.after('<h3>Текст после блока</h3>')
 mainText.before('<h3>Текст перед блоком</h3>')
+
+/*
+   Метод each и контекст this
+*/
+$('.icons img').each(function () {
+   const element = $(this) // Текущий элемент
+
+   if (element.attr('src').includes('icon2'))
+      element.fadeOut(1000)
+})
