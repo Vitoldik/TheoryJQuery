@@ -137,3 +137,9 @@ console.log(logoImg.attr('src'))
 logoImg.attr('src', 'img/icon2.png')
 logoImg.attr('data-test', 0)
 logoImg.removeAttr('test') // удаление аттрибутов
+
+/*
+   Дата аттрибуты (data)
+*/
+$('.test').data('key', 'value')
+const {key, value} = $('.test').data()
