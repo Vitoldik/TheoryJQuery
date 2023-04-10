@@ -141,5 +141,12 @@ logoImg.removeAttr('test') // удаление аттрибутов
 /*
    Дата аттрибуты (data)
 */
-$('.test').data('key', 'value')
-const {key, value} = $('.test').data()
+const nav = $('nav')
+nav.data('key', 'test')
+const {key} = nav.data()
+console.log(`Nav data: ${key}`)
+
+/*
+   Методы addClass и removeClass
+*/
+$('nav menu').addClass('border').removeClass('border')
