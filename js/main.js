@@ -161,3 +161,12 @@ navMenu.css({
    'color': 'green',
    'padding': '10px'
 })
+
+/*
+   Метод animate
+   Изменение стилей за указанное время
+   (работает только с числовыми параметрами)
+*/
+$('nav menu li a').animate({
+   'padding': '12px'
+}, 3000)
