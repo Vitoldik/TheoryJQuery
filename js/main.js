@@ -199,3 +199,10 @@ $('.icons img').each(function () {
    Свойство length
 */
 console.log($('div').length)
+
+/*
+   Методы clone и remove
+*/
+const mainTextClone = mainText.clone()
+$('body').prepend(mainTextClone)
+mainTextClone.remove()
