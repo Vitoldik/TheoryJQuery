@@ -290,3 +290,13 @@ $(window).on('resize', () => {})
 
 // При скролле страницы
 $(window).on('scroll', () => {})
+
+/*
+   Событие hover
+*/
+$logo.hover(() => {}, () => {})
+
+$logo.on({
+   mouseenter: () => {},
+   mouseleave: () => {}
+})
