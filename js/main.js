@@ -60,18 +60,18 @@ $(function() {
 /*
    Методы text, hide, show
 */
-const tagP = $('.mainText p')
-console.log(tagP.text()) // получить текст внутри элемента
-tagP.text('Новый текст') // изменить текст
+const $tagP = $('.mainText p')
+console.log($tagP.text()) // получить текст внутри элемента
+$tagP.text('Новый текст') // изменить текст
 
 // tagP.hide() - скрыть элемент
-tagP.hide(3000, function () {}) // элемент скроется через 3 секунды, после скрытия выполнится функция из второго аргумента
-tagP.show(2000) // отобразить элемент
+$tagP.hide(3000, function () {}) // элемент скроется через 3 секунды, после скрытия выполнится функция из второго аргумента
+$tagP.show(2000) // отобразить элемент
 
 /*
    Цепной вызов функций
 */
-tagP.hide().text('Новый текст 1').show(3000)
+$tagP.hide().text('Новый текст 1').show(3000)
 
 /*
    Автоматические циклы
@@ -82,16 +82,16 @@ $('.icons > div').hide(3000).show(2000)
 /*
    Методы width и height
 */
-const btn = $('.btn')
-const btnWidth = btn.width()
-const btnHeight = btn.height()
+const $btn = $('.btn')
+const btnWidth = $btn.width()
+const btnHeight = $btn.height()
 // console.log(btnWidth, btnHeight)
-btn.width(300)
-btn.height(300)
+$btn.width(300)
+$btn.height(300)
 
 const widthAndHeight = (element) => {
-   const object = $('.' + element)
-   return `${object.width()}, ${object.height()}`
+   const $object = $('.' + element)
+   return `${$object.width()}, ${$object.height()}`
 }
 
 console.log(widthAndHeight('btn'))
@@ -99,8 +99,8 @@ console.log(widthAndHeight('btn'))
 /*
    Метод html
 */
-const mainText = $('.mainText')
-console.log(mainText.html()) // Вывод содержимого в виде html
+const $mainText = $('.mainText')
+console.log($mainText.html()) // Вывод содержимого в виде html
 // mainText.html('<b>Жирный текст</b>') // Изменить содержимое элемента
 
 /*
@@ -115,14 +115,14 @@ const elementOut = (element, time) => {
 
 elementOut('btn', 2000)
 
-btn.fadeIn(3000)
+$btn.fadeIn(3000)
 
 /*
    Метод fadeTo - изменение уровня прозрачности элемента
 */
-const logo = $('.logo')
+const $logo = $('.logo')
 // 3 аргумент - функция, которая будет выполнена после полного изменения прозрачности
-logo.fadeTo(4000, 0.1, function (){}).fadeTo(4000, 1)
+$logo.fadeTo(4000, 0.1, function (){}).fadeTo(4000, 1)
 
 /*
    Методы slideUp и slideDown - плавно скрывает/отображает выбранные элементы
@@ -133,33 +133,33 @@ $('menu li:first-child').slideUp(2000).slideDown(2000)
 /*
    Метод attr и removeAttr - добавление/удаление аттрибутов у элементов
 */
-const logoImg = $('.logo img')
+const $logoImg = $('.logo img')
 
-console.log(logoImg.attr('src'))
-logoImg.attr('src', 'img/icon2.png')
-logoImg.attr('data-test', 0)
-logoImg.removeAttr('test') // удаление аттрибутов
+console.log($logoImg.attr('src'))
+$logoImg.attr('src', 'img/icon2.png')
+$logoImg.attr('data-test', 0)
+$logoImg.removeAttr('test') // удаление аттрибутов
 
 /*
    Дата аттрибуты (data)
 */
-const nav = $('nav')
-nav.data('key', 'test')
-const {key} = nav.data()
+const $nav = $('nav')
+$nav.data('key', 'test')
+const {key} = $nav.data()
 console.log(`Nav data: ${key}`)
 
 /*
    Методы addClass и removeClass
 */
-const navMenu = $('nav menu')
-navMenu.addClass('border').removeClass('border')
+const $navMenu = $('nav menu')
+$navMenu.addClass('border').removeClass('border')
 
 /*
    Метод css
 */
-console.log(navMenu.css('font-size'))
-navMenu.css('font-size', '16px')
-navMenu.css({
+console.log($navMenu.css('font-size'))
+$navMenu.css('font-size', '16px')
+$navMenu.css({
    'color': 'green',
    'padding': '10px'
 })
@@ -182,19 +182,19 @@ $('nav menu li a').animate({
    4. after() добавляет содержимое после выбранных элементов:
 */
 
-mainText.append('<h3>Текст в конце</h3>')
-mainText.prepend('<h3>Текст в начале</h3>')
-mainText.after('<h3>Текст после блока</h3>')
-mainText.before('<h3>Текст перед блоком</h3>')
+$mainText.append('<h3>Текст в конце</h3>')
+$mainText.prepend('<h3>Текст в начале</h3>')
+$mainText.after('<h3>Текст после блока</h3>')
+$mainText.before('<h3>Текст перед блоком</h3>')
 
 /*
    Метод each и контекст this
 */
 $('.icons img').each(function () {
-   const element = $(this) // Текущий элемент
+   const $element = $(this) // Текущий элемент
 
-   if (element.attr('src').includes('icon2'))
-      element.fadeOut(1000)
+   if ($element.attr('src').includes('icon2'))
+      $element.fadeOut(1000)
 })
 
 /*
@@ -205,6 +205,6 @@ console.log($('div').length)
 /*
    Методы clone и remove
 */
-const mainTextClone = mainText.clone()
-$('body').prepend(mainTextClone)
-mainTextClone.remove()
+const $mainTextClone = $mainText.clone()
+$('body').prepend($mainTextClone)
+$mainTextClone.remove()
