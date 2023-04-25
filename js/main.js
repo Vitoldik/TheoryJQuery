@@ -300,3 +300,12 @@ $logo.on({
    mouseenter: () => {},
    mouseleave: () => {}
 })
+
+/*
+   Объект события (Event object)
+*/
+$logo.on('click', (e) => {
+   e.preventDefault()
+
+   console.log(e)
+})
