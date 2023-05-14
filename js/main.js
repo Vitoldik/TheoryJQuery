@@ -377,3 +377,12 @@ $(':reset').click(e => {
    e.preventDefault()
    $('.text2').removeAttr('disabled')
 })
+
+/*
+   Создание элементов
+*/
+$('<div>', {
+   id: 'some-id',
+   class: 'some-class some-other-class',
+   text: 'now this div has a title!'
+}).appendTo('.form1');
