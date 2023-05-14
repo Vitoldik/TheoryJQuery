@@ -342,8 +342,23 @@ $('.form1').on('submit', (e) => {
    e.preventDefault()
 })
 
-$('.text1').on('focus', ({currentTarget}) => {
+$text1 = $('.text1')
+
+$text1.on('focus', ({currentTarget}) => {
    $(currentTarget).css({
       'border': '1px double red'
    })
+})
+
+/*
+   События blur и change
+*/
+$text1.on('blur', ({currentTarget}) => {
+   $(currentTarget).css({
+      'border': '1px double blue'
+   })
+})
+
+$text1.on('change', ({currentTarget}) => {
+   console.log($(currentTarget).val())
 })
