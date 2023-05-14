@@ -325,3 +325,12 @@ $(':input')
 $('.form1 :input')
 $('.form1 :checkbox:checked') // Выбранные чекбоксы
 $('.form1 :selected')
+
+/*
+   Метод val()
+*/
+$(':submit').on('click', e => {
+   e.preventDefault()
+
+   console.log($('textarea').val())
+})
