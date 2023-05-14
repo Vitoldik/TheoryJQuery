@@ -309,3 +309,19 @@ $logo.on('click', (e) => {
 
    console.log(e)
 })
+
+/*
+   Выборка и фильтрация элементов формы
+*/
+$('.form1 :checkbox')
+$(':radio')
+$(':submit')
+$(':reset')
+$(':file')
+$(':button')
+$(':text')
+$(':password')
+$(':input')
+$('.form1 :input')
+$('.form1 :checkbox:checked') // Выбранные чекбоксы
+$('.form1 :selected')
