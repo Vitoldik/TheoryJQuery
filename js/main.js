@@ -326,10 +326,12 @@ $('.form1 :input')
 $('.form1 :checkbox:checked') // Выбранные чекбоксы
 $('.form1 :selected')
 
+const $submit = $(':submit')
+
 /*
    Метод val()
 */
-$(':submit').on('click', e => {
+$submit.on('click', e => {
    e.preventDefault()
 
    console.log($('textarea').val())
@@ -361,4 +363,17 @@ $text1.on('blur', ({currentTarget}) => {
 
 $text1.on('change', ({currentTarget}) => {
    console.log($(currentTarget).val())
+})
+
+/*
+   Добавление и удаление аттрибутов
+*/
+$submit.click(e => {
+   e.preventDefault()
+   $('.text2').attr('disabled', 'disabled')
+})
+
+$(':reset').click(e => {
+   e.preventDefault()
+   $('.text2').removeAttr('disabled')
 })
